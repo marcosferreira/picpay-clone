@@ -2,21 +2,23 @@ import React from 'react';
 import { Text } from 'react-native';
 import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 
-import { Wrapper, Header, BalanceContainer, BalanceTitle, Balance } from './styles';
+import { Wrapper, Container, Header, BalanceContainer, BalanceTitle, Balance } from './styles';
 
 export default function Home() {
   return (
     <Wrapper>
-      <Header>
-        <MaterialCommunityIcons name="qrcode-scan" size={30} color="#10c86e" />
+      <Container>
+        <Header>
+          <MaterialCommunityIcons name="qrcode-scan" size={30} color="#10c86e" />
 
-        <BalanceContainer>
-          <BalanceTitle>Meu saldo</BalanceTitle>
-          <Balance>R$ 0,00</Balance>
-        </BalanceContainer>
+          <BalanceContainer>
+            <BalanceTitle>Meu saldo</BalanceTitle>
+            <Balance>R$ 0,00</Balance>
+          </BalanceContainer>
 
-        <AntDesign name="gift" size={30} color="#10c86e" />
-      </Header>
+          <AntDesign name="gift" size={30} color="#10c86e" />
+        </Header>
+      </Container>
     </Wrapper>
   );
 }
