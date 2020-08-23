@@ -8,14 +8,14 @@ import PayScreen from './screens/Pay';
 
 const Tab = createBottomTabNavigator();
 
-const Icons = {
+const icons = {
   Home: {
     lib: AntDesign,
     name: 'home',
   },
   Wallet: {
     lib: AntDesign,
-    name: 'credicard',
+    name: 'creditcard',
   },
   Pay: {
     lib: AntDesign,
@@ -33,12 +33,47 @@ const Icons = {
 
 function Navigation() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeScreen} options={{ title: 'Início' }} />
-      <Tab.Screen name="Wallet" component={WalletScreen} options={{ title: 'Carteira' }} />
-      <Tab.Screen name="Pay" component={PayScreen} options={{ title: 'Pagamento' }} />
-      <Tab.Screen name="Notifications" component={PayScreen} options={{ title: 'Notificações' }} />
-      <Tab.Screen name="Settings" component={PayScreen} options={{ title: 'Ajustes' }} />
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          const { lib: Icon, name } = icons[route.name];
+          return <Icon name={name} size={size} color={color} />
+        },
+      })}
+      tabBarOptions={{
+        style: {
+          backgroundColor: '#131418',
+          borderBottomColor: 'rgba(255, 255, 255, 0.2)'
+        },
+        activeTintColor: '#fff',
+        inactiveTintColor: '#92929c',
+      }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ title: 'Início' }}
+      />
+      <Tab.Screen
+        name="Wallet"
+        component={WalletScreen}
+        options={{ title: 'Carteira' }}
+      />
+      <Tab.Screen
+        name="Pay"
+        component={PayScreen}
+        options={{ title: 'Pagamento' }}
+      />
+      <Tab.Screen
+        name="Notifications"
+        component={PayScreen}
+        options={{ title: 'Notificações' }}
+      />
+      <Tab.Screen
+        name="Settings"
+        component={PayScreen}
+        options={{ title: 'Ajustes' }}
+      />
     </Tab.Navigator>
   );
 }
