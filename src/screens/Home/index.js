@@ -2,6 +2,8 @@ import React from 'react';
 import { Text } from 'react-native';
 import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 
+import Suggestions from '../../components/Suggestions';
+
 import { Wrapper, Container, Header, BalanceContainer, BalanceTitle, Balance } from './styles';
 
 export default function Home() {
@@ -18,6 +20,8 @@ export default function Home() {
 
           <AntDesign name="gift" size={30} color="#10c86e" />
         </Header>
+
+        <Suggestions />
       </Container>
     </Wrapper>
   );
