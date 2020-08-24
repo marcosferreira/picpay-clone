@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 
 import Suggestions from '../../components/Suggestions';
+import Activities from '../../components/Activities';
 
 import { Wrapper, Container, Header, BalanceContainer, BalanceTitle, Balance } from './styles';
 
@@ -22,6 +22,8 @@ export default function Home() {
         </Header>
 
         <Suggestions />
+
+        <Activities />
       </Container>
     </Wrapper>
   );
