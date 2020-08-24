@@ -47,3 +47,31 @@ export const UserName = styled.Text`
   color: #fff;
   font-size: 20px;
 `;
+
+
+export const CardFooter = styled.View`
+  margin-top: 15px;
+`;
+
+export const Details = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const Value = styled.Text`
+  color: #f75175;
+  font-size: 14px;
+  font-weight: bold;
+`;
+
+export const Divider = styled.View`
+  width: 1px;
+  height: 12px;
+  margin: 0 10px;
+  background: rgba(255, 255, 255, 0.4);
+`;
+
+export const Date = styled.Text`
+  color: #fff;
+  margin-left: 5px;
+`;
