@@ -6,6 +6,8 @@ export const Wrapper = styled.View`
   flex: 1;
 `;
 
+export const Container = styled.ScrollView``;
+
 export const Header = styled(LinearGradient)`
   height: 300px;
 `;
@@ -69,4 +71,90 @@ export const ActionLabel = styled.Text`
   font-size: 16px;
   color: #fff;
   margin-left: 10px;
+`;
+
+export const UseBalance = styled.View`
+  background: #1C1C1E;
+  height: 60px;
+  flex-direction: row;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const UseBalanceTitle = styled.Text`
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+`;
+
+export const PaymentMethods = styled.View`
+  margin-top: 25px;
+  padding: 0 16px;
+`;
+
+export const PaymentMethodsTitle = styled.Text`
+  color: #8E8E93;
+  text-transform: uppercase;
+`;
+
+export const Card = styled.View`
+  background: #1E232A;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+`;
+
+export const CardBody = styled.View`
+  flex-direction: row;
+`;
+
+export const CardDetails = styled.View`
+  margin-right: 14px;
+  flex: 1;
+`;
+
+export const CardTitle = styled.Text`
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+`;
+
+export const CardInfo = styled.Text`
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-top: 25px;
+`;
+
+export const Img = styled.Image`
+  width: 60px;
+`;
+
+export const AddButton = styled.TouchableOpacity`
+  margin-top: 15px;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const AddLabel = styled.Text`
+  margin-left: 10px;
+  color: #0DB060;
+  font-size: 18px;
+  font-weight: bold;
+`;
+
+export const UseTicketButton = styled.TouchableOpacity`
+  margin: 25px 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const UseTicketLabel = styled.Text`
+  margin-left: 10px;
+  color: #0DB060;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration-line: underline;
 `;
