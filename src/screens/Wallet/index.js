@@ -35,16 +35,21 @@ import {
 } from './styles';
 
 export default function Wallet() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [useBalance, setUseBalance] = useState(true);
 
   function handleToggleVisibility() {
     setIsVisible((prevState) => !prevState);
   }
 
+  function handleToggleUseBalance() {
+    setUseBalance((prevState) => !prevState);
+  }
+
   return (
     <Wrapper>
       <Container>
-        <Header colors={['#52E78C', '#1AB563']}>
+        <Header colors={useBalance ? ['#52E78C', '#1AB563'] : ['#D3D3D3', '#868686']}>
           <HeaderContainer>
             <Title>Saldo PicPay</Title>
 
@@ -53,7 +58,7 @@ export default function Wallet() {
                 R$ <Bold>{ isVisible ? '0,00' : '----'}</Bold>
               </Value>
               <EyeButton onPress={handleToggleVisibility}>
-                <Feather name="eye" size={28} color="#FFF"></Feather>
+                <Feather name={isVisible ? 'eye' : 'eye-off'} size={28} color="#FFF"></Feather>
               </EyeButton>
             </BalanceContainer>
 
@@ -78,7 +83,7 @@ export default function Wallet() {
           <UseBalanceTitle>
             Usar saldo ao pagar
         </UseBalanceTitle>
-          <Switch />
+          <Switch value={useBalance} onValueChange={handleToggleUseBalance} />
         </UseBalance>
 
         <PaymentMethods>
